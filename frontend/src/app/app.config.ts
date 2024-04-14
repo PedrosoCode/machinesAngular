@@ -1,8 +1,9 @@
-import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
-import { routes } from './app.routes';
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'Login', component: LoginComponent }
+];
 
-export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)]
-};
